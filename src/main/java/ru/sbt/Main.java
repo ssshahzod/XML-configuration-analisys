@@ -1,7 +1,10 @@
 package ru.sbt;
 
+import ru.sbt.files.FileWalker;
+
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        var walker = new FileWalker(args[0]);
+        walker.files();
     }
 }

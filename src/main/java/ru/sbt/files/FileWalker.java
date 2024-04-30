@@ -30,6 +30,7 @@ public class FileWalker {
             walkStream.filter(p -> p.toFile().isFile()).forEach(f -> {
                 if (f.toString().endsWith(fileExtension)) {
                     var config = new ConfigData(f.toString());
+                    config.processImports();
                     paths.add(config);
                 }
             });
